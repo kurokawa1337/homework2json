@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <h2>Search:</h2>
+            <form id="search-form">
+                <div class="input-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="input-group">
+                    <label for="type">Type:</label>
+                    <select id="type">
+                        <option value="movie">Movie</option>
+                        <option value="series">Series</option>
+                        <option value="episode">Episode</option>
+                    </select>
+                </div>
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+        </div>
+
+        <div id="error-message" class="error" hidden>Movie not found!</div>
+
+        <div id="results-wrapper" hidden>
+            <h2>Films:</h2>
+            <div id="movies-list"></div>
+            <div id="pagination"></div>
+        </div>
+
+        <div id="details-wrapper" hidden>
+            <h2>Film info:</h2>
+            <div id="movie-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
